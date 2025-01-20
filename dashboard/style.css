@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;500;800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background: #ffffff5b;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px #c3cecf50;
+}
+
+.sidebar header {
+  font-size: 30px;
+  color: rgb(132, 15, 15);
+  text-align: center;
+  background: none;
+  user-select: none;
+  padding: 29px 0; /* Tambahkan ruang atas dan bawah */
+}
+
+.sidebar img.logo {
+  width: 250px; /* Sesuaikan lebar logo sesuai kebutuhan */
+  height: auto; /* Menjaga proporsi tinggi dan lebar */
+  display: block; /* Membuat logo menjadi blok */
+  margin: 0 auto; /* Memposisikan logo di tengah secara horizontal */
+  padding: 10px 0; /* Menambahkan padding untuk memberikan jarak di sekitar logo */
+  border-radius: 5px; /* Jika ingin menambahkan sudut membulat pada logo */
+}
+
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 50px;
+  color: rgb(0, 0, 0);
+  padding-left: 40px;
+  transition: 0.4s;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #c3cecf73;
+  font-weight: 700; /* Equivalent to bold */
+}
+
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  font-size: 30px;
+  width: 35px;
+  height: 10px;
+  vertical-align: middle;
+}
+
+form {
+  position: absolute; /* Memungkinkan form diatur secara absolut */
+  top: 0; /* Posisi di bagian atas */
+  right: 0; /* Posisi di pojok kanan */
+}
+
+.right-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+form {
+  margin-top: 70px; /* Tambahkan jarak antara teks dan tombol */
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+label #btn {
+  left: 40px;
+  top: 6px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  padding: 6px 12px;
+  transition: all 0.3s;
+  background: rgb(96, 102, 104);
+}
+
+label #cancel {
+  z-index: 1111;
+  left: -195px;
+  top: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 4px 9px;
+  transition: all 0.3s ease;
+  background: rgb(96, 102, 104);
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+  left: 195px;
+}
+
+#check {
+  display: none;
+}
+
+.section1 {
+  background: linear-gradient(rgba(164, 164, 164, 0.5), rgba(0, 0, 0, 0.563)),
+    url("../images/seafood.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.section1 .container {
+  width: 80%;
+  max-width: 1200px;
+  height: 50vh; /* Full viewport height */
+  margin: 0 auto; /* Centers the container horizontally */
+  display: flex; /* Use Flexbox for centering */
+  flex-direction: column; /* Stack the text vertically */
+  justify-content: center; /* Vertically centers the content */
+  align-items: center; /* Horizontally centers the content */
+  text-align: center; /* Centers text horizontally */
+  padding: 90px;
+}
+
+.section1 .container h1,
+.section1 .container h2 {
+  font-family: "Poppins", sans-serif; /* Ensure the font is loaded correctly */
+  margin: 0; /* Removes any default margin */
+  margin-right: 50px;
+  color: rgb(176, 108, 19);
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px 5px rgba(20, 20, 20, 0.5); /* Adding a shadow */
+}
+
+.section1 .container h1 {
+  font-size: 80px;
+}
+
+.section1 .container h2 {
+  font-size: 30px;
+}
+
+/* Right Corner Styling */
+.right-corner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  padding: 70px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-out;
+}
+
+/* Section Styling */
+.right-corner section {
+  color: #fff;
+  text-align: right;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Header Styling */
+.right-corner h3 {
+  font-size: 24px;
+  margin-bottom: 0%;
+  color: #ffd700;
+  animation: textGlow 2s infinite alternate;
+}
+
+/* Paragraph Styling */
+.right-corner p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+/* Right Corner Styling */
+.right-corner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  padding: 17px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 1s ease-out;
+}
+
+/* Section Styling */
+.right-corner section {
+  color: #fff;
+  text-align: right;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Header Styling */
+.right-corner h3 {
+  font-size: 1.2rem; /* Menggunakan rem untuk ukuran yang lebih kecil */
+  margin-bottom: 8px;
+  color: #ffd700;
+  animation: textGlow 2s infinite alternate;
+}
+
+/* Paragraph Styling */
+.right-corner p {
+  font-size: 0.9rem; /* Mengurangi ukuran font */
+  margin-bottom: 20%;
+  color: #ddd;
+}
+
+/* Button Styling */
+.right-corner button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Mengurangi padding */
+  border-radius: 5px;
+  font-size: 0.8rem; /* Mengurangi ukuran font tombol */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 90px; /* Menurunkan tombol sedikit */
+  margin-right: 15px; /* Mengurangi jarak kanan */
+  margin-top: 10px; /* Menambahkan margin atas untuk menurunkan tombol lebih jauh */
+}
+.right-corner button:hover {
+  background-color: #e63946;
+}
+
+/* Animations */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 5px #ffd700, 0 0 10px #ffd700, 0 0 15px #ffd700;
+  }
+  100% {
+    text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
+  }
+}
+
+/* Laporan Dropdown Styling */
+.sidebar ul li a {
+  display: block; /* Menjadikan item menu sebagai blok untuk memberi ruang pada elemen lain */
+  padding: 15px 20px; /* Memberikan padding pada elemen untuk memberi ruang di sekitar teks */
+  font-size: 20px; /* Ukuran font untuk item menu */
+  color: #120202; /* Warna teks */
+  text-decoration: none; /* Menghapus garis bawah pada teks */
+  background-color: transparent; /* Menjadikan latar belakang transparan */
+  position: relative; /* Memungkinkan pengaturan posisi dropdown relatif terhadap item menu */
+  transition: all 0.4s ease; /* Efek transisi untuk perubahan gaya */
+  border-radius: 5px; /* Membulatkan sudut item menu */
+  box-sizing: border-box; /* Menghitung padding dan border dalam ukuran total */
+  border-bottom: 0px solid #808080; /* Ukuran border saat ini */
+}
+
+/* Hover effect for main menu item */
+.sidebar ul li a:hover {
+  background-color: #022a54; /* Latar belakang biru saat hover */
+  color: #fff; /* Warna teks menjadi putih saat hover */
+  padding-left: 50px; /* Memberikan ruang lebih di sebelah kiri saat hover */
+}
+
+/* Dropdown menu styling */
+.sidebar ul li .dropdown-menu {
+  display: none; /* Menyembunyikan dropdown menu secara default */
+  opacity: 0; /* Mengatur opasitas menjadi 0 saat dropdown tersembunyi */
+  transform: translateX(20px); /* Memulai dari posisi lebih ke kanan */
+  transition: all 0.4s ease-in-out; /* Efek transisi saat dropdown muncul */
+  background-color: #333; /* Latar belakang dropdown */
+  border-radius: 8px; /* Sudut membulat untuk dropdown */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Memberikan bayangan pada dropdown */
+  position: absolute; /* Posisi dropdown menjadi absolut relatif terhadap item menu */
+  top: 0; /* Menempatkan dropdown sejajar vertikal dengan item menu */
+  left: 100%; /* Menempatkan dropdown di sebelah kanan item menu */
+  z-index: 10; /* Menetapkan z-index untuk memastikan dropdown di atas elemen lain */
+  min-width: 200px; /* Lebar minimum dropdown */
+  margin-top: 0; /* Menghapus ruang di atas dropdown */
+}
+
+/* Show dropdown when class 'show' is added */
+.sidebar ul li.show > .dropdown-menu {
+  display: block; /* Menampilkan dropdown saat elemen memiliki kelas 'show' */
+  opacity: 1; /* Mengatur opasitas menjadi 1 untuk visibilitas */
+  transform: translateX(0); /* Posisi final di tempatnya */
+}
+
+/* Dropdown item styling */
+.sidebar ul li .dropdown-menu li a {
+  padding: 12px 10px; /* Memberikan padding pada item dropdown */
+  font-size: 16px; /* Ukuran font item dropdown */
+  color: #ddd; /* Warna teks item dropdown */
+  background-color: #444; /* Latar belakang item dropdown */
+  border-bottom: 1px solid #555; /* Garis pemisah antara item dropdown */
+  border-radius: 4px; /* Sudut membulat pada item dropdown */
+  box-sizing: border-box; /* Menghitung padding dan border dalam ukuran total */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Efek transisi untuk perubahan latar belakang dan transformasi */
+}
+
+/* Hover effect for dropdown items */
+.sidebar ul li .dropdown-menu li a:hover {
+  background-color: #680749; /* Mengubah latar belakang menjadi ungu gelap saat hover */
+  color: #fff; /* Mengubah warna teks menjadi putih saat hover */
+  transform: translateX(
+    10px
+  ); /* Memberikan pergerakan sedikit ke kanan saat hover */
+}
+
+/* Icon inside dropdown */
+.sidebar ul li a i.material-icons {
+  font-size: 22px; /* Ukuran ikon */
+  vertical-align: middle; /* Menjaga ikon agar sejajar dengan teks */
+  margin-right: 15px; /* Memberikan jarak antara ikon dan teks */
+  transition: transform 0.3s ease; /* Efek transisi untuk pergerakan ikon */
+}
+
+/* Adding a subtle glow effect to the dropdown items */
+.sidebar ul li a:hover,
+.sidebar ul li .dropdown-menu li a:hover {
+  box-shadow: 0 0 15px rgba(8, 39, 72, 0.5); /* Efek cahaya halus saat hover */
+  transform: translateX(10px) scale(1); /* Efek perbesaran dan pergerakan saat hover */
+}
+
+/* Add smooth animations to submenu appearance */
+@keyframes slideDown {
+  0% {
+    opacity: 0; /* Menyembunyikan dropdown */
+    transform: translateY(-20px); /* Mulai dari posisi lebih tinggi */
+  }
+  100% {
+    opacity: 1; /* Menampilkan dropdown */
+    transform: translateY(0); /* Menurunkan dropdown ke posisi akhir */
+  }
+}
+
+/* Apply slide down animation to dropdown menu */
+.sidebar ul li .dropdown-menu {
+  animation: slideDown 0.2s ease-out; /* Menambahkan animasi slide down saat dropdown muncul */
+}

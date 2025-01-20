@@ -1,0 +1,116 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #eef2f3;
+  display: grid;
+  justify-items: center; /* Mengatur elemen secara horizontal ke tengah */
+  align-items: center; /* Mengatur elemen secara vertikal ke tengah */
+  margin-top: 50px;
+  height: 50vh;
+  padding: 10px;
+}
+
+/* Main Container */
+form {
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+}
+
+/* Heading */
+h2 {
+  font-size: 32px;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Label Styling */
+label {
+  display: block;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 12px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Input Field Styling */
+input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ffa500;
+  background-color: #fff;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffa500;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff8c00;
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Error Message Styling */
+p {
+  color: #ff4500;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  form {
+    padding: 40px 30px;
+  }
+
+  input[type="text"] {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}

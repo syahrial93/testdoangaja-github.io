@@ -1,0 +1,155 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #d9534f;
+  background-size: cover; /* Menutupi seluruh area body tanpa merubah proporsi gambar */
+  background-attachment: fixed; /* Membuat gambar latar belakang tetap saat scroll */
+  background-repeat: no-repeat; /* Gambar latar belakang tidak akan diulang */
+  background-position: center center; /* Menempatkan gambar di tengah */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Memastikan body memiliki tinggi penuh layar */
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Menambahkan transparansi pada latar belakang */
+  z-index: -1; /* Menempatkan transparansi di bawah konten */
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Notification */
+.notif-login {
+  background-color: #ffcccc;
+  color: #d9534f;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.form-login {
+  width: 100%;
+}
+
+label {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+.input-login {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.input-login:focus {
+  outline: none;
+  border-color: #ff7e5f;
+  background-color: #fff;
+}
+
+/* Button */
+.button-login {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7e5f;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-login:hover {
+  background-color: #feb47b;
+  transform: scale(1.05);
+}
+
+/* Button Focus */
+.button-login:focus {
+  outline: none;
+}
+
+/* Forgot Password */
+.forgot-password {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #ff7e5f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #feb47b;
+  text-decoration: underline;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

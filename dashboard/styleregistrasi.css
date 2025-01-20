@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set font-family */
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: #fff;
+  flex-direction: column;
+}
+
+/* Styling for the container (Title) */
+h1 {
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Form styling */
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Input and select styles */
+input,
+select {
+  padding: 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2575fc;
+  background-color: #f7f7f7;
+  outline: none;
+}
+
+/* Styling for the labels */
+label {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+
+/* Button styling */
+button {
+  padding: 16px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #1e63c6;
+  transform: translateY(-2px);
+}
+
+/* Style for the select dropdown */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20viewBox%3D"0%200%2012%2012"%3E%3Cpath%20d%3D"M3.5%204L6%207l2.5-3H3.5z"%20fill%3D"none"%20stroke%3D"%23888888"%20stroke-width%3D"1.5"%20/%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px 12px;
+}
+
+/* Form focus effects */
+input:focus,
+select:focus {
+  border-color: #2575fc;
+  outline: none;
+}
+
+/* Gaya untuk notifikasi */
+.notif-login {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 1s forwards; /* Animasi slideIn untuk tampilan */
+  position: relative;
+}
+
+/* Animasi slideIn */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Notifikasi sukses */
+.notif-login.success {
+  background-color: #4caf50; /* Warna hijau untuk sukses */
+  border: 2px solid #388e3c;
+}
+
+/* Notifikasi error */
+.notif-login.error {
+  background-color: #f44336; /* Warna merah untuk error */
+  border: 2px solid #d32f2f;
+}
+
+/* Tombol kembali */
+.notif-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.notif-button:hover {
+  background-color: #357ab7;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 480px) {
+  .notif-login {
+    width: 90%;
+    padding: 15px;
+  }
+}
